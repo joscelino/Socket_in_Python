@@ -1,4 +1,6 @@
-ip_ = 'localhost'
-port = 7777
+from typing import Tuple
 
-server_address = (ip_, port)
+IP = 'localhost'
+PORT = 7777
+
+server_address: Tuple = (IP, PORT)

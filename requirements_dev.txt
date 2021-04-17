@@ -1,3 +1,4 @@
 ipython~=7.22
 radon~=4.5
 isort~=5.8
+safety~=1.10
