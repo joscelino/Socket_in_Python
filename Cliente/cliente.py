@@ -1,9 +1,9 @@
 import os
 import socket
 import sys
+
 sys.path.append(r"D:\Python\Socket")
 from server_address.ipaddress import server_address
-
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 delete = False
