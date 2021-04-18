@@ -20,7 +20,7 @@ if os.path.exists(file_name) is False:
     connection.send(error)
     connection.shutdown(socket.SHUT_RDWR)
     connection.close()
-    exit()
+    sys.exit()
 
 else:
     with open(file_name, 'rb') as f:

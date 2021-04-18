@@ -6,21 +6,21 @@ sys.path.append(r"D:\Python\Socket")
 from server_address.ipaddress import server_address
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-delete = False
+DELETE: bool = False
 
 try:
     client.connect(server_address)
 except ConnectionRefusedError:
     print(f'Connection refused. Please check the server/port: {server_address}!')
-    exit()
+    sys.exit()
 
 print('Connected!\n')
 
-file_name = str(input('File >>'))
+FILE_NAME = str(input('File >>'))
 
-client.send(file_name.encode())
+client.send(FILE_NAME.encode())
 
-with open(file_name, 'wb') as f:
+with open(FILE_NAME, 'wb') as f:
 
     while True:
         data = client.recv(1000000)
@@ -28,15 +28,15 @@ with open(file_name, 'wb') as f:
         if not data:
             break
 
-        elif data != bytes('Error'.encode()):
+        if data != bytes('Error'.encode()):
             f.write(data)
-            print(f'File: {file_name} receipt.')
+            print(f'File: {FILE_NAME} receipt.')
 
         else:
-            print(f'File: {file_name} FAILED!!!!!')
-            delete = True
+            print(f'File: {FILE_NAME} FAILED!!!!!')
+            DELETE = True
 
-if delete is True:
-    if os.path.exists(file_name):
-        os.remove(file_name)
-        delete = False
+if DELETE is True:
+    if os.path.exists(FILE_NAME):
+        os.remove(FILE_NAME)
+        DELETE = False
