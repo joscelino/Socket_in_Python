@@ -1,13 +1,13 @@
-cliente.py:
-    h1: 3
-    h2: 4
-    N1: 3
-    N2: 5
-    vocabulary: 7
-    length: 8
-    calculated_length: 12.75488750216347
-    volume: 22.458839376460833
-    difficulty: 1.875
-    effort: 42.11032383086406
-    time: 2.3394624350480036
-    bugs: 0.007486279792153611
+servidor.py:
+    h1: 1
+    h2: 2
+    N1: 1
+    N2: 2
+    vocabulary: 3
+    length: 3
+    calculated_length: 2.0
+    volume: 4.754887502163469
+    difficulty: 0.5
+    effort: 2.3774437510817346
+    time: 0.1320802083934297
+    bugs: 0.0015849625007211565

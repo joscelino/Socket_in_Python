@@ -9,5 +9,4 @@ logging.basicConfig(filemode='a',
                     format=log_format
                     )
 
-# Instance
 logger = logging.getLogger('root')
